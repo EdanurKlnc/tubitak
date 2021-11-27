@@ -29,16 +29,16 @@
        <a href="kayit.html"><i class="fas fa-user-plus"></i>Kayıt Ol</a>
     </nav>
     </section>
-    
+    <form action="" method="POST">
     <div class="box">
         <form>
             <span class="text-center">Giriş</span>
         <div class="input-container">
-            <input type="mail" required=""/ id="mail">
+            <input type="mail" required=""/ id="mail" name="mail">
             <label>E-mail</label>		
         </div>
         <div class="input-container">		
-            <input type="password" required=""/ id="sifre">
+            <input type="password" required=""/ id="sifre" name="sifre">
             <label>Sifre</label>
            <br> </br>
             <a href="kayit.html">Kayıt Ol</a>
@@ -47,6 +47,31 @@
     </form>	
     </div>
     
-    
+</form>
+
+
+<?php 
+require_once "includes/pdo.php"
+if($_POST){
+    $kullanici_mail=$_POST['mail'];
+    $kullanici_sifre=$_POST['ksifre'];
+    $hashing_sifre;
+    function encrypt_decrypt($action, $kullanici_sifre) {
+        $output = true;
+        $sifreleme_kodlari = 'AES-256-CTR'; //sifreleme yontemi
+        $sifreleme_key = '25760'; //sifreleme anahtari
+        $sifre_baslangici = '**109'; //gerekli sifreleme baslama vektoru
+        $key = hash('sha256', $sifreleme_key); //anahtar hast fonksiyonu ile sha256 algoritmasi ile sifreleniyor
+        $key_substr = substr(hash('sha256', $sifre_baslangici), 0, 16); //0. ve 16. sifrelenmiş harfi göstermeyecek
+        if( $action == 'encrypt' ) {
+            $output = urlencode(serialize(base64_encode(gzcompress(openssl_encrypt($kullanici_sifre,$sifreleme_kodlari, $key, 0, $key_substr)))));
+          }
+          return $output;
+
+          
+
+
+
+?>
 </body>
 </html>

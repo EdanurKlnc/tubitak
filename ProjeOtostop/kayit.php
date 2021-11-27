@@ -28,24 +28,26 @@
        <a href="kayit.html"><i class="fas fa-user-plus"></i>Kayıt Ol</a>
     </nav>
     </section>
+
+    <form action="" method="POST">
     
     <div class="box">
         <form>
             <span class="text-center">Kayıt</span>
         <div class="input-container" id="ad">
-            <input type="name" required="name"/>
+            <input type="text" required="name" autocomplete="off" pattern="[a-zA-Z<?=$trChars?>\s.]*" required autofocus oninvalid="alert('Kullanıcı Adını Girmeniz Zorunludur!')" name="kadi"/>
             <label>Ad</label>		
         </div>
         <div class="input-container" id="soyad"> 
-            <input type="sname" required="sname"/>
+            <input type="text" required="sname" autocomplete="off" required autofocus oninvalid="alert('Soyadınızı Girmeniz Zorunludur!')" name="ksoyadi"/>
             <label>Soyad</label>		
         </div>
         <div class="input-container-mail" id="mail">
-            <input type="mail" required="mail"/>
+            <input type="text" required="mail" autocomplete="off" required autofocus oninvalid="alert('E-mailinizi Girmeniz Zorunludur!')" name="email"/>
             <label>E-mail</label>		
         </div>
         <div class="input-container" id="sifre">
-            <input type="password" required="password"/>
+            <input type="password" required="password" autocomplete="off" required autofocus oninvalid="alert('Şifrenizi Girmeniz Zorunludur!')" name="ksifre"/>
             <label>Şifre</label>		
         </div>
         <div class="input-container" id="tel">		
@@ -56,9 +58,33 @@
             <button type="button" class="btn">KAYIT</button>
     </form>	
     </div>
+    </form>
 
-    <php 
+    <?php 
+require_once "includes/pdo.php"
+$mail_kontrol;
+$kullanici_mail;
+$kullanici_info;
+$hashing_sifre;
 
+if($_POST){
     
+    $kullanici_adi = htmlentities(trim($_POST['kadi']));
+    $kullanici_sifre=htmlentities(trim($_POST['ksifre']));
+    $kullanici_sifre_tekrar=htmlentities(trim($_POST['ksifretkrar']));
+    $kullanici_email=htmlentities(trim($_POST['mail']));
+    
+    
+
+?>>
 </body>
 </html>
+
+
+
+
+
+$hashing_sifre = encrypt_decrypt('encrypt',$kullanici_sifre);//ŞİFREmizi hashing sifre değişkenine aktarır
+          //$kullanici_info=$pdo->query("SELECT * FROM kayit WHERE kullanici_adi='$kullanici_adi' ")->fetch();
+          $mail_kontrol=$pdo->query("SELECT * FROM kayit WHERE email='$kullanici_email' ")->fetch();
+          $sifre_kontrol=$pdo->query("SELECT * FROM kayit WHERE kullanici_sifre='$kullanici_sifre' ")->fetch();
