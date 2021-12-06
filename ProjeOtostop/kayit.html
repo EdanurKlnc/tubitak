@@ -81,11 +81,11 @@ if($_POST){
     if(count($ktel_array)<11 ){   /////TELEFON NUMARASI 11 HANEDEN DÜŞÜK OLMAMALI///
         echo "<script type='text/javascript'>alert('Telefon numaranızı lütfen başında '0' olarak tuşlayınız.')</script>";            
     }
-    else if(count($ktel_array)>1 ){
+    else if(count($ktel_array)>11 ){
 
         echo "<script type='text/javascript'>alert('Telefon numaranız 11 haneli olmalıdır.')</script>";            
     }
-    else if(count($ktel_array)==11 ){
+    else (count($ktel_array)==11 ){
 
         $kullanici_tel=$pdo->query("SELECT * FROM kayit WHERE kullanici_adi='$kullanici_adi' ")->fetch();
     }
