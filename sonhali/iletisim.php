@@ -22,11 +22,11 @@
     <section id="menu">
         <div id="logo">İletişim</div>
         <nav> 
-       <a href="anasayfa.html"><i class="fas fa-home"></i>Anasayfa</a> 
-       <a href="hakkimizda.html"><i class="fas fa-info"></i>Hakkımızda</a> 
-       <a href="iletisim.html"><i class="fas fa-phone-volume"></i>İletişim</a> 
-       <a href="giris.html"><i class="fas fa-user"></i>Giriş Yap</a> 
-       <a href="kayit.html"><i class="fas fa-user-plus"></i>Kayıt Ol</a>
+       <a href="anasayfa.php"><i class="fas fa-home"></i>Anasayfa</a> 
+       <a href="hakkimizda.php"><i class="fas fa-info"></i>Hakkımızda</a> 
+       <a href="iletisim.php"><i class="fas fa-phone-volume"></i>İletişim</a> 
+       <a href="giris.php"><i class="fas fa-user"></i>Giriş Yap</a> 
+       <a href="kayit.php"><i class="fas fa-user-plus"></i>Kayıt Ol</a>
     </nav>
     </section>
     <section id="iletisim">
@@ -74,7 +74,7 @@
      <a href="#"><i class="fab fa-google-plus-g social"></i></a>
      <a href="#"><i class="fab fa-twitter social"></i></a>
     
-     <a href="anasayfa.html"><i class="fas fa-chevron-up"></i></a>
+     <a href="anasayfa.php"><i class="fas fa-chevron-up"></i></a>
       </footer>
         </div>
     </section>
@@ -83,3 +83,9 @@
     
 </body>
 </html>
+
+<?php
+
+include("includes/pdo.php");
+
+?>

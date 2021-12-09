@@ -16,11 +16,11 @@
     crossorigin="anonymous" > </script> 
  
         <nav> 
-       <a href="anasayfa.html"><i class="fas fa-home"></i>Anasayfa</a> 
-       <a href="hakkimizda.html"><i class="fas fa-info"></i>Hakkımızda</a> 
-       <a href="iletisim.html"><i class="fas fa-phone-volume"></i>İletişim</a> 
-       <a href="giris.html"><i class="fas fa-user"></i>Giriş Yap</a> 
-       <a href="kayit.html"><i class="fas fa-user-plus"></i>Kayıt Ol</a>
+       <a href="anasayfa.php"><i class="fas fa-home"></i>Anasayfa</a> 
+       <a href="hakkimizda.php"><i class="fas fa-info"></i>Hakkımızda</a> 
+       <a href="iletisim.php"><i class="fas fa-phone-volume"></i>İletişim</a> 
+       <a href="giris.php"><i class="fas fa-user"></i>Giriş Yap</a> 
+       <a href="kayit.php"><i class="fas fa-user-plus"></i>Kayıt Ol</a>
     </nav>
     </section>
     
@@ -53,3 +53,9 @@
     
 </body>
 </html>
+
+<?php
+
+include("includes/pdo.php");
+
+?>

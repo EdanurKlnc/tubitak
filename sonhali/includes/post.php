@@ -1,5 +1,5 @@
 <?php
- require_once(realpath($_SERVER["DOCUMENT_ROOT"]) .'/ProjeOtostop/includes/pdo.php');
+ require_once(realpath($_SERVER["DOCUMENT_ROOT"]) .'/yeni2/includes/pdo.php');
 
 
 
