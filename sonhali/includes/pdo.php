@@ -2,7 +2,7 @@
 
 $vt_sunucu="localhost";
 $vt_kullanici="root";
-$vt_sifre="asdfghjkl..1";
+$vt_sifre="";
 $vt_adi="yeni";
 
 $baglan=mysqli_connect($vt_sunucu, $vt_kullanici, $vt_sifre, $vt_adi );
