@@ -76,7 +76,7 @@ if(isset($_POST["kayit"])){
     $kullanici_adi= $_POST['kadi'];
     $kullanici_soyadi= $_POST['ksoyadi'];
     $kullanici_mail= $_POST['kmail'];
-    $kullanici_sifre= $_POST['ksifre'];
+    $kullanici_sifre= md5($_POST['ksifre']);
     $kullanici_tel= $_POST['ktel'];
 
 
@@ -88,10 +88,12 @@ if(isset($_POST["kayit"])){
     }
     else{
 
-        echo "eklendi";
+        echo "<script> alert('Kayıt başarıyla oluşturuldu, anasayfaya yönlendiriliyorsunuz')</script>";
     }
+    header ("location:giris.php");
+
 }
-    
+
 
 
 ?>

@@ -3,7 +3,7 @@
     padding: 40px;
     text-align: center;
     text-transform:capitalize ;
-    font-weight: 700;
+    font-weight: 00;
 
 }
 h3{
@@ -47,7 +47,7 @@ span{
 #sag{
     float:right;
     width: 600px;
-    color: rgba(43, 40, 40, 0.6);
+    color: rgba(48, 60, 233, 0.6);
     text-align:center;
     letter-spacing:1px ; /*harf aralığını açma */
     font-size: 15px;
@@ -64,9 +64,9 @@ span{
 
 }
 #pson{
-    color:#9999;
-    letter-spacing: 1px;
-    font-size: 10px;
+    color:rgba(23, 6, 97, 0.6);
+    letter-spacing: 2px;
+    font-size: 30px;
     line-height: 1.5;
     margin-top:30px ;
     font-weight: 100;

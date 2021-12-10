@@ -34,7 +34,7 @@
         <div id="icerik">
             <h2>İçerik</h2>
             <hr width=300>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate blanditiis voluptatum, fuga aperiam commodi numquam quas, enim quo excepturi nulla, rerum quibusdam sed perspiciatis ea optio? Non soluta molestias autem.
+            <p>Otostop, motorlu taşıtları ile seyahat eden insanları seyahat ettikleri istikamet üzerinde durdurup, gidecekleri yönün sorulması suretiyle yapılan ücretsiz bir seyahat biçimidir.
             </p>
 
         </div>

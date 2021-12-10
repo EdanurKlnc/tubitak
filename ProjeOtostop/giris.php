@@ -31,19 +31,19 @@
     </section>
     
     <div class="box">
-        <form>
+        <form action="" method="POST">
             <span class="text-center">Giriş</span>
         <div class="input-container">
-            <input type="mail" required=""/ id="mail">
+            <input type="mail" required=""/ id="mail" name="kmail">
             <label>E-mail</label>		
         </div>
         <div class="input-container">		
-            <input type="password" required=""/ id="sifre">
+            <input type="password" required=""/ id="sifre" name="ksifre">
             <label>Sifre</label>
            <br> </br>
             <a href="kayit.php">Kayıt Ol</a>
         </div>
-            <button type="button" class="btn">GİRİŞ</button>
+            <button type="submit" class="btn" name="giris"> GİRİŞ </button>
     </form>	
     </div>
     
@@ -52,6 +52,28 @@
 </html>
 <?php
 
+
 include("includes/pdo.php");
+
+session_start();
+
+if(isset($_POST["giris"])){
+  
+   $kmail =$_POST['kmail'];
+    $ksifre =md5($_POST['ksifre']);
+   
+
+    if(!$kmail){
+        echo "Mail Adresinizi Giriniz";
+    }
+    else if(!$ksifre){
+        echo "Şifrenizi Giriniz";
+
+    }
+    
+
+     header ("location:profil.php");
+}
+
 
 ?>

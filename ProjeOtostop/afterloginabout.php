@@ -16,10 +16,10 @@
     crossorigin="anonymous" > </script> 
  
         <nav> 
-       <a href="afterloginhome.html"><i class="fas fa-home"></i>Anasayfa</a> 
-       <a href="afterloginabout.html"><i class="fas fa-info"></i>Hakkımızda</a> 
-       <a href="afterlogincotact.html"><i class="fas fa-phone-volume"></i>İletişim</a> 
-       <a href="profil.html"><i class="fa fa-user-circle-o"></i>Profil</a> 
+       <a href="afterloginhome.php"><i class="fas fa-home"></i>Anasayfa</a> 
+       <a href="afterloginabout.php"><i class="fas fa-info"></i>Hakkımızda</a> 
+       <a href="afterlogincotact.php"><i class="fas fa-phone-volume"></i>İletişim</a> 
+       <a href="profil.php"><i class="fa fa-user-circle-o"></i>Profil</a> 
 
 
     </nav>
@@ -54,3 +54,8 @@
     
 </body>
 </html>
+<?php
+
+include("includes/pdo.php");
+
+?>
