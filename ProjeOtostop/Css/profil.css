@@ -1,15 +1,22 @@
 *{
     box-sizing: inherit;
 }
-
+/*
 body{
-    font-family: 'Nunito', sans-serif;
-    background-color: rgb(255, 255, 255);
+        background-image: url("../Resim/otostop.jpeg");
+        background-position: center;
+        background-origin: content-box;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100%;
+        font-family: 'Noto Sans', sans-serif;
+        background-attachment: fixed;
+    
 }
-
+*/
 #menu{
     height: 80px;
-    padding:0 20px;
+    padding: 20px;
 
 }
 #logo{
@@ -55,7 +62,15 @@ nav a:visited{
 
 .container{
 
-background-color: #d9f3f5;
+    background:url("../Resim/yol.jpg");
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    text-transform:capitalize ;
+    font-weight: 700;
+    height: 800px;
+    background-position:center; /* Resmi ortala */
+    background-attachment: fixed; /*Resmi sabitle */
 padding-top: 55%;
 }
 
@@ -78,8 +93,9 @@ text-shadow:#cbd2d6 5px 5px 5px;
 
 }
 .content{
+   
     position: relative;
-        margin-left: 35%;
+    margin-left: 35%;
     padding-top: 2%;
     margin-top: -30%;
 }
@@ -94,7 +110,7 @@ text-shadow:#cbd2d6 5px 5px 5px;
 p.icerik{
 margin-top: 1.2em;
 margin-bottom:1.2em ;
-font-size: 18px; 
+font-size: 20px; 
 display: block;
 border-left-style: solid;
 border-left-color: blue;
@@ -103,14 +119,6 @@ border-top: solid;
 border-top-color:blue ;
 background-color:#f0f5f5;
 
-
-}
-
-
-    
-
-.ekle {
-    padding-left: 4rem;
 
 }
 

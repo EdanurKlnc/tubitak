@@ -30,12 +30,13 @@ h3{
     font-size: 20px;
     font-weight: 600;
 }
-#h5sol,#sag{
+#h5sol,#h5sag{
     margin:0;
     padding:0;
     margin-top: 20px;
 
 }
+/*
 span{
     font-size: 40px;
     margin-right: 5px;
@@ -43,17 +44,18 @@ span{
     color: #445c6e;
     font-weight: 600;
     float: left;
-}
+}*/
 #sag{
     float:right;
     width: 600px;
-    color: rgba(48, 60, 233, 0.6);
+    color: rgba(15, 17, 141, 0.6);
     text-align:center;
     letter-spacing:1px ; /*harf aralığını açma */
-    font-size: 15px;
+    font-size: 30px;
     line-height:1.5; /*satır aralığı */
     font-weight: 100;
 }
+
 .img-fluid{
     max-width: 70%;
     height: auto;
