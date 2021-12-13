@@ -40,7 +40,7 @@
 
             <div id="sag">
                 <h5 id="h5sag">Gelişen teknoloji ile geçmişteki alışkanlıklarımızı daha konforlu hale getirmeye amaçladık. Amaçlarımız doğrultusunda mobil otostop uygulamasını geliştirerek ‘otostop’ kavramını güncelleştirdik. Otostop çekmek isteyen bireylerin güzergahlarından araç geçecek mi, geçen araç otostop için duracak mı, nereye kadar bırakacak sorularını ortadan kaldırdık. Otostop için en önemli husus olan güvenilirlik korkusunu da uygulama içinde kullanıcıların bilgileri ile ortadan kaldırdık. Bu sayende her bireyin güven içinde otostop ile seyahat etmesini kolaylaştırdık.     </h5>
-                <span>O</span>
+                <span></span>
                 <p id="psag"> </p>
 
             </div>
