@@ -18,14 +18,13 @@
 </head>
 <body>
     <section id="menu">
-        <div id="logo">Anasayfa</div>
+        <div id="logo">Otostop</div>
         <nav> 
-<a href="afterloginhome.php"><i class="fas fa-home"></i>Anasayfa</a> 
-<a href="afterloginabout.php"><i class="fas fa-info"></i>Hakkımızda</a> 
-<a href="afterlogincotact.php"><i class="fas fa-phone-volume"></i>Iletişim</a> 
-<a href="profil.php"><i class="fa fa-user-circle-o"></i>Profil</a> 
-
-
+        <a href="afterloginhome.php"><i class="fas fa-home"></i>Anasayfa</a> 
+       <a href="afterloginabout.php"><i class="fas fa-info"></i>Hakkımızda</a> 
+       <a href="afterlogincontact.php"><i class="fas fa-phone-volume"></i>İletişim</a>
+       <a href="profil.php"><i class="fa fa-user-circle-o"></i>Profil</a> 
+       <a href="anasayfa.php"><i class="fas fa-times-circle"></i></i>Çıkış Yap</a>  
     </nav>
     </section>
     
@@ -35,7 +34,7 @@
         <div id="icerik">
             <h2>İçerik</h2>
             <hr width=300>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate blanditiis voluptatum, fuga aperiam commodi numquam quas, enim quo excepturi nulla, rerum quibusdam sed perspiciatis ea optio? Non soluta molestias autem.
+            <p>Otostop, motorlu taşıtları ile seyahat eden insanları seyahat ettikleri istikamet üzerinde durdurup, gidecekleri yönün sorulması suretiyle yapılan ücretsiz bir seyahat biçimidir.
             </p>
 
         </div>
@@ -45,6 +44,7 @@
 
 </body>
 </html>
+
 <?php
 
 include("includes/pdo.php");

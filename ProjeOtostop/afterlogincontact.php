@@ -27,11 +27,12 @@ include("includes/pdo.php");
     <section id="menu">
         <div id="logo">İletişim</div>
         <nav> 
-       <a href="anasayfa.php"><i class="fas fa-home"></i>Anasayfa</a> 
-       <a href="hakkimizda.php"><i class="fas fa-info"></i>Hakkımızda</a> 
-       <a href="iletisim.php"><i class="fas fa-phone-volume"></i>İletişim</a> 
-       <a href="giris.php"><i class="fas fa-user"></i>Giriş Yap</a> 
-       <a href="kayit.php"><i class="fas fa-user-plus"></i>Kayıt Ol</a>
+       <a href="afterloginhome.php"><i class="fas fa-home"></i>Anasayfa</a> 
+       <a href="afterloginabout.php"><i class="fas fa-info"></i>Hakkımızda</a> 
+       <a href="afterlogincontact.php"><i class="fas fa-phone-volume"></i>İletişim</a>
+       <a href="profil.php"><i class="fa fa-user-circle-o"></i>Profil</a> 
+       <a href="anasayfa.php"><i class="fas fa-times-circle"></i></i>Çıkış Yap</a>  
+
     </nav>
     </section>
     <section id="iletisim">

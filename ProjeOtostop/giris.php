@@ -1,3 +1,8 @@
+<?php
+include("includes/pdo.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,29 +56,27 @@
 </body>
 </html>
 <?php
-
-
-include("includes/pdo.php");
-
 session_start();
-
 if(isset($_POST["giris"])){
-  
-   $kmail =$_POST['kmail'];
-    $ksifre =md5($_POST['ksifre']);
-   
 
-    if(!$kmail){
-        echo "Mail Adresinizi Giriniz";
-    }
-    else if(!$ksifre){
-        echo "Şifrenizi Giriniz";
+$kullanici_mail = $_POST['kmail'];
+$kullanici_sifre = md5($_POST['ksifre']);
 
-    }
-    
 
-     header ("location:profil.php");
+$sql="SELECT * FROM kayit WHERE kayit_mail='$kullanici_mail' and kayit_sifre='$kullanici_sifre'";
+$result=mysqli_query($baglan,$sql);
+$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+
+
+if(mysqli_num_rows($result) == 1)
+{
+$_SESSION['kullanici_mail'] = $kullanici_mail; 
+header("location: profil.php"); 
 }
-
-
+else
+{
+    header ("location:giris.php");
+}
+}
 ?>

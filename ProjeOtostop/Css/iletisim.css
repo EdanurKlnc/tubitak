@@ -54,7 +54,7 @@
 #textarea{
     font-family: Arial;
 }
-input[type="submit"]{
+.btn{
     cursor: pointer;
     background-color: #445c6e;
     font-size: 18px;

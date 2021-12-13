@@ -56,7 +56,7 @@ include("includes/pdo.php");
             <label>Şifre</label>		
         </div>
         <div class="input-container" id="tel"  >		
-            <input type="tel" pattern="\d{11}" required="tel" name="ktel" title="Başında '0' olarak tuşlayınız"/>
+            <input type="tel"  required="tel" name="ktel" title="Başında '0' olarak tuşlayınız"/>
             <label>Telefon Numarası</label>
 
         </div>
@@ -86,14 +86,15 @@ if(isset($_POST["kayit"])){
     if($sonuc==0){
         echo "veriler eklenemedi";
     }
-    else{
+    else
+    {
 
-        echo "<script> alert('Kayıt başarıyla oluşturuldu, anasayfaya yönlendiriliyorsunuz')</script>";
     }
     header ("location:giris.php");
 
-}
 
+
+}
 
 
 ?>

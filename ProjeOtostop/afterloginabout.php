@@ -16,12 +16,11 @@
     crossorigin="anonymous" > </script> 
  
         <nav> 
-       <a href="afterloginhome.php"><i class="fas fa-home"></i>Anasayfa</a> 
+        <a href="afterloginhome.php"><i class="fas fa-home"></i>Anasayfa</a> 
        <a href="afterloginabout.php"><i class="fas fa-info"></i>Hakkımızda</a> 
-       <a href="afterlogincotact.php"><i class="fas fa-phone-volume"></i>İletişim</a> 
+       <a href="afterlogincontact.php"><i class="fas fa-phone-volume"></i>İletişim</a>
        <a href="profil.php"><i class="fa fa-user-circle-o"></i>Profil</a> 
-
-
+       <a href="anasayfa.php"><i class="fas fa-times-circle"></i></i>Çıkış Yap</a>  
     </nav>
     </section>
     
@@ -36,24 +35,25 @@
        <h3>Hakkımızda</h3>
        <div id="container">
            <div id="sol">
-               <h5 id="h5sol">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, ab earum. Sit, quis optio veritatis distinctio consequatur obcaecati, laboriosam facere consectetur et animi facilis impedit. Iste quidem ab enim dolores?</h5>
+               <h5 id="h5sol"> Bartın Üniversitesi Bilgisayar Mühendisliği Öğrencileri</h5>
             </div>
 
             <div id="sag">
-                <h5 id="h5sag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero voluptatibus repudiandae, nulla cumque error et esse maiores voluptas nemo itaque alias autem ipsam incidunt numquam quas in adipisci laborum.    </h5>
-                <span>O</span>
-                <p id="psag">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet voluptate pariatur animi iusto quia voluptatem autem, porro vel deleniti possimus eaque aut laboriosam quam id praesentium ad vitae quae reprehenderit!</p>
+                <h5 id="h5sag">Gelişen teknoloji ile geçmişteki alışkanlıklarımızı daha konforlu hale getirmeye amaçladık. Amaçlarımız doğrultusunda mobil otostop uygulamasını geliştirerek ‘otostop’ kavramını güncelleştirdik. Otostop çekmek isteyen bireylerin güzergahlarından araç geçecek mi, geçen araç otostop için duracak mı, nereye kadar bırakacak sorularını ortadan kaldırdık. Otostop için en önemli husus olan güvenilirlik korkusunu da uygulama içinde kullanıcıların bilgileri ile ortadan kaldırdık. Bu sayende her bireyin güven içinde otostop ile seyahat etmesini kolaylaştırdık.     </h5>
+                <span></span>
+                <p id="psag"> </p>
 
             </div>
            <img src="Resim/yolculuk.jpg" alt="" class="img-fluid mt100">
 
-             <p id="pson">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum ipsa quod quis ut itaque voluptas, quasi quia eligendi accusamus aliquam voluptates corporis laboriosam saepe dolor, facere fuga perferendis velit maxime.</p>
+             <p id="pson"> Seyahat etmek hiç bu kadar kolay olmamıştı !</p>
         </div>
    </section>
         
     
 </body>
 </html>
+
 <?php
 
 include("includes/pdo.php");
