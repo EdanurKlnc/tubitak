@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">otostop</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ara">ara</string>
+    <string name="yayinla">yayınla</string>
+    <string name="yoluculuklarim">yoluculuklarım</string>
+    <string name="profil">Profil</string>
+
+
+    <string-array name="iller">
+        <item>Adana</item>
+        <item>Ankara</item>
+        <item>İstanbul</item>
+        <item>Bartın</item>
+
+
+    </string-array>
+</resources>

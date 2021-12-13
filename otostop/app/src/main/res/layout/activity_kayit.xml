@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99a0a3"
+    tools:context=".kayit">
+
+    <EditText
+        android:id="@+id/kayitSifre"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/kayitTel4"
+        app:layout_constraintEnd_toEndOf="@+id/kayitTel4"
+        app:layout_constraintStart_toStartOf="@+id/kayitTel4"
+        app:layout_constraintTop_toBottomOf="@+id/kayitMail" />
+
+    <EditText
+        android:id="@+id/kayitSoyad"
+        android:layout_width="259dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Soyadınız"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/kayitMail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kayitAd" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="259dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="26dp"
+        android:text="Lütfen bilgilerinizi eksiksiz giriniz."
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/kayitAd"
+        app:layout_constraintStart_toStartOf="@+id/kayitAd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/kayitMail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:hint="E-mail Adresiniz"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/kayitSifre"
+        app:layout_constraintEnd_toEndOf="@+id/kayitSifre"
+        app:layout_constraintStart_toStartOf="@+id/kayitSoyad"
+        app:layout_constraintTop_toBottomOf="@+id/kayitSoyad" />
+
+    <EditText
+        android:id="@+id/kayitAd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:hint="Adınız"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/kayitSoyad"
+        app:layout_constraintEnd_toEndOf="@+id/kayitSoyad"
+        app:layout_constraintStart_toStartOf="@+id/kayitSoyad"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/kayitTel4"
+        android:layout_width="259dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Telefon Numaranız"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/kayitBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kayitSifre" />
+
+    <Button
+        android:id="@+id/kayitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="178dp"
+        android:background="@drawable/giris_buton"
+        android:text="Kayıt Ol"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kayitTel4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

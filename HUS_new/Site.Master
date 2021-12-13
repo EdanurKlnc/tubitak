@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HUS_new.SiteMaster" %>
+﻿yazm<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HUS_new.SiteMaster" %>
 
 <!DOCTYPE html>
 
