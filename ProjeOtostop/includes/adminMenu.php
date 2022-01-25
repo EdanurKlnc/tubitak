@@ -25,10 +25,8 @@
                                 <div class="MenuItem1">
                                         <a href="adminKanBagislayanlar.php"><i class="fas fa-2x fa-car"></i>&nbsp Yolculuklar</a>  
                                 </div>
+                               
                                 
-                                <div class="MenuItem2">
-                                        <a href="AdminKanArayan.php"><i class="fa fa-2x fa-search"></i>boşşş</a>
-                                </div> 
                                 <div class="MenuItem3">
                                         <a href="adminMesajlar.php"><i class="fa  fa-2x fa-commenting-o"></i>Mesajlar</a> 
                                 </div>
