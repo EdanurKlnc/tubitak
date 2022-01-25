@@ -95,25 +95,25 @@ include("includes/pdo.php");
 
 if(isset($_POST["gonder"])){
     $kullanici_adsoyad= $_POST['kadsoyad'];
-    $kullanici_maili= $_POST['kmail'];
-    $kullanici_teli= $_POST['ktel'];
+    $kullanici_mail= $_POST['kmail'] ;
+    $kullanici_tel=$_POST['ktel'] ;
     $kullanici_konu= $_POST['kkonu'];
     $kullanici_mesaj= $_POST['kmesaj'];
 
-
     $ekle = "INSERT INTO iletisim (iletisim_adsoyad,iletisim_mail,iletisim_tel,iletisim_konu,iletisim_mesaj) values ('".$kullanici_adsoyad."','".$kullanici_maili."','".$kullanici_teli."','".$kullanici_konu."','".$kullanici_mesaj."')";
-    $sonuc=mysqli_query($baglan,$ekle);
+    /* $sonuc=mysqli_query($baglan,$sql); */
+    $pdo->exec($ekle);
 
-    if($sonuc==0){
-        echo "Mesajınız Alınamadı";
+    if($pdo==0) {
+        echo"mesajınız alınamadı";
+
     }
     else{
-
-        echo "<script> alert('Mesajınız alınmıştır, en kısa sürede e-mail üzerinden dönüş sağlanacaktır')</script>";
-        header ("location:iletisim.php");
+        echo "<script type='text/javascript'>alert('Mesajınız başarıyla gönderildi,İletişim Sayfasına Yönlendiriliyorsunuz...')</script>";
+           heafer("Refresh: 0; url=iletisim.php");
     }
-    
-
 }
+
+
 
 ?>

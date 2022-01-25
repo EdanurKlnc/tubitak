@@ -47,11 +47,11 @@ span{
 }*/
 #sag{
     float:right;
-    width: 600px;
+    width: 400px;
     color: rgba(15, 17, 141, 0.6);
     text-align:center;
     letter-spacing:1px ; /*harf aralığını açma */
-    font-size: 30px;
+    /* font-size: 5px; */
     line-height:1.5; /*satır aralığı */
     font-weight: 100;
 }

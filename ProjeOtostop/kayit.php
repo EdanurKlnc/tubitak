@@ -70,6 +70,7 @@ include("includes/pdo.php");
     
 
 <?php
+$kullanici_info;
 
 
 if(isset($_POST["kayit"])){
@@ -81,16 +82,20 @@ if(isset($_POST["kayit"])){
 
 
     $ekle = "INSERT INTO kayit (kayit_ad,kayit_soyad,kayit_mail,kayit_sifre,kayit_tel) values ('".$kullanici_adi."','".$kullanici_soyadi."','".$kullanici_mail."','".$kullanici_sifre."','".$kullanici_tel."')";
-    $sonuc=mysqli_query($baglan,$ekle);
+   /* $sonuc=mysqli_query($baglan,$ekle); */
+   $pdo->exec($ekle);
 
-    if($sonuc==0){
+    if($pdo==0){
         echo "veriler eklenemedi";
     }
     else
     {
-
+ 
+        echo "<script type='text/javascript'>alert('Başarıyla Kayıt Oldunuz,Giriş Sayfasına Yönlendiriliyorsunuz...')</script>";
+      
+         header ("Refresh: 0; url= giris.php");
     }
-    header ("location:giris.php");
+   
 
 
 

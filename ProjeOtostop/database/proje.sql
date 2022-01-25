@@ -26,7 +26,7 @@ CREATE TABLE `arac_ilan` (
   `arac_ilan_id` int NOT NULL AUTO_INCREMENT,
   `ad` int DEFAULT NULL,
   `soyad` int DEFAULT NULL,
-  `aciklama` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci DEFAULT NULL,
+  `aciklama` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
   `arac` int DEFAULT NULL,
   `kalkis` int NOT NULL,
   `varis` int NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE `arac_ilan` (
   CONSTRAINT `arac_ilan_ibfk_3` FOREIGN KEY (`arac`) REFERENCES `kullanici` (`kullanici_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `arac_ilan_ibfk_4` FOREIGN KEY (`kalkis`) REFERENCES `il` (`il_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `arac_ilan_ibfk_5` FOREIGN KEY (`varis`) REFERENCES `il` (`il_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,9 +64,9 @@ DROP TABLE IF EXISTS `il`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `il` (
   `il_id` int NOT NULL AUTO_INCREMENT,
-  `iller` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci DEFAULT NULL,
+  `iller` varchar(20) CHARACTER SET utf8mb4  DEFAULT NULL,
   PRIMARY KEY (`il_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,12 +88,12 @@ DROP TABLE IF EXISTS `ilce`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ilce` (
   `ilce_id` int NOT NULL AUTO_INCREMENT,
-  `ilceler` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci DEFAULT NULL,
+  `ilceler` varchar(20) CHARACTER SET utf8mb4  DEFAULT NULL,
   `iller` int DEFAULT NULL,
   PRIMARY KEY (`ilce_id`),
   KEY `iller` (`iller`),
   CONSTRAINT `ilce_ibfk_1` FOREIGN KEY (`iller`) REFERENCES `il` (`il_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=973 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=973 DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -120,10 +120,17 @@ CREATE TABLE `kayit` (
   `kayit_mail` varchar(45) NOT NULL,
   `kayit_sifre` varchar(45) NOT NULL,
   `kayit_tel` int NOT NULL,
+  `rol` int(1) NOT NULL,
+
   PRIMARY KEY (`kayit_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+INSERT INTO `kayit` (`kayit_id`, `kayit_ad`, `kayit_sifre`, `rol`, `kayit_mail`) VALUES
+(1, 'admin', 's%3A32%3A%22eJwrT%2FeuKE0JsUiNdA8LLTewBQAzCAWb%22%3B', 1, 'eda@gmail.com'),
+(2, 'deneme1', 's%3A28%3A%22eJyrcEwsKUtJc08xTXUDAB3HBFo%3D%22%3B', 0, 'deneme@gmail.com');
+
+--
 --
 -- Dumping data for table `kayit`
 --
@@ -142,19 +149,21 @@ DROP TABLE IF EXISTS `kullanici`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `kullanici` (
   `kullanici_id` int NOT NULL,
-  `ad` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci DEFAULT NULL,
-  `soyad` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci DEFAULT NULL,
+  `ad` varchar(20) CHARACTER SET utf8mb4  DEFAULT NULL,
+  `soyad` varchar(25) CHARACTER SET utf8mb4  DEFAULT NULL,
   `tc` int DEFAULT NULL,
-  `mail` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci DEFAULT NULL,
+  `mail` varchar(40) CHARACTER SET utf8mb4  DEFAULT NULL,
   `dogum_tarihi` date DEFAULT NULL,
   `telefon` int DEFAULT NULL,
-  `sifre` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci DEFAULT NULL,
-  `hakkimda` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci NOT NULL,
+  `sifre` varchar(40) CHARACTER SET utf8mb4  DEFAULT NULL,
+  `hakkimda` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
   `fotograf` blob NOT NULL,
-  `yorumlar` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci NOT NULL,
-  `arac` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci NOT NULL,
+  `yorumlar` mediumtext CHARACTER SET utf8mb4  NOT NULL,
+  `arac` varchar(40) CHARACTER SET utf8mb4 NOT NULL,
+    `rol` int(1) NOT NULL,
+
   PRIMARY KEY (`kullanici_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -178,7 +187,7 @@ CREATE TABLE `yolcu_ilan` (
   `ad` int DEFAULT NULL,
   `soyad` int DEFAULT NULL,
   `konum` float DEFAULT NULL,
-  `aciklama` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci DEFAULT NULL,
+  `aciklama` varchar(80) CHARACTER SET utf8mb4  DEFAULT NULL,
   `varis` int DEFAULT NULL,
   PRIMARY KEY (`yolcu_ilan_id`),
   KEY `soyad` (`soyad`),
@@ -187,7 +196,7 @@ CREATE TABLE `yolcu_ilan` (
   CONSTRAINT `yolcu_ilan_ibfk_1` FOREIGN KEY (`soyad`) REFERENCES `kullanici` (`kullanici_id`) ON UPDATE CASCADE,
   CONSTRAINT `yolcu_ilan_ibfk_2` FOREIGN KEY (`ad`) REFERENCES `kullanici` (`kullanici_id`) ON UPDATE CASCADE,
   CONSTRAINT `yolcu_ilan_ibfk_3` FOREIGN KEY (`varis`) REFERENCES `il` (`il_id`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -224,7 +233,7 @@ CREATE TABLE `yolculuklar` (
   CONSTRAINT `yolculuklar_ibfk_3` FOREIGN KEY (`kalkis`) REFERENCES `arac_ilan` (`arac_ilan_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `yolculuklar_ibfk_4` FOREIGN KEY (`varis`) REFERENCES `arac_ilan` (`arac_ilan_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `yolculuklar_ibfk_5` FOREIGN KEY (`tarih`) REFERENCES `arac_ilan` (`arac_ilan_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

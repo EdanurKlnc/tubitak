@@ -1,6 +1,7 @@
 <?php
 include("includes/pdo.php");
 
+
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +14,9 @@ include("includes/pdo.php");
   
     <link rel="stylesheet" href="Css/giris.css"> 
     <link rel="stylesheet" href="Css/style.css"> 
+    <link rel="stylesheet" href="Css/adminOtostop.css">
+    <link rel="stylesheet" href="admin.php">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,26 +61,55 @@ include("includes/pdo.php");
 </html>
 <?php
 session_start();
+
+require_once "includes/pdo.php";
+
+
 if(isset($_POST["giris"])){
 
 $kullanici_mail = $_POST['kmail'];
 $kullanici_sifre = md5($_POST['ksifre']);
 
+$rol1=1;
+$rol2=0;
 
-$sql="SELECT * FROM kayit WHERE kayit_mail='$kullanici_mail' and kayit_sifre='$kullanici_sifre'";
-$result=mysqli_query($baglan,$sql);
-$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+$kullanici_kontrol =$pdo->query("SELECT * FROM kayit WHERE kayit_mail='$kullanici_mail' and kayit_sifre='$kullanici_sifre' AND rol='$rol2' ")->fetch();
+$admin_kontrol =$pdo->query("SELECT * FROM kayit WHERE kayit_mail='$kullanici_mail' and kayit_sifre='$kullanici_sifre' AND rol='$rol1' ")->fetch();
 
 
-
-if(mysqli_num_rows($result) == 1)
+if($kullanici_kontrol)
 {
 $_SESSION['kullanici_mail'] = $kullanici_mail; 
-header("location: profil.php"); 
+$_SESSION['kayit_sifre'] = $kullanici_sifre; 
+
+header("Refresh: 0; url= profil.php");
+
+
+
 }
-else
+
+else if($admin_kontrol)
 {
-    header ("location:giris.php");
+    $_SESSION['kullanici_mail'] = $kullanici_mail; 
+    $_SESSION['kayit_sifre'] = $kullanici_sifre; 
+
+   
+ /*   $_SESSION["admin"] = $admin_kontrol['kullanici_mail']; */
+
+    echo "<script type='text/javascript'>alert('Hoşgeldiniz, Sayın, $kullanici_mail Admin Sayfasına Yönlendiriliyorsunuz')</script>";
+
+    header("Refresh: 0; url= admin.php");
+
+
+    
 }
+else{
+        echo "<script type='text/javascript'>alert('Girmiş Olduğunuz Bilgiler Hatalıdır! Tekrar Deneyiniz')</script>";
+        header("Refresh: 0; url= giris.php");
+
 }
+
+} 
+
+
 ?>

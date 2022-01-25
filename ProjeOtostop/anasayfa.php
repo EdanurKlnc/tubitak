@@ -25,6 +25,7 @@
 <a href="iletisim.php"><i class="fas fa-phone-volume"></i>İletişim</a> 
 <a href="giris.php"><i class="fas fa-user"></i>Giriş Yap</a> 
 <a href="kayit.php"><i class="fas fa-user-plus"></i>Kayıt Ol</a>
+<a href ="admin.php"><i class=""></i>Admin Paneli</a>
     </nav>
     </section>
     

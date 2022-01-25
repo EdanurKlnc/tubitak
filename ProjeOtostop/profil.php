@@ -23,7 +23,7 @@
         <nav> 
 <a href="afterloginhome.php"><i class="fas fa-home"></i>Anasayfa</a> 
 <a href="afterloginabout.php"><i class="fas fa-info"></i>Hakkımızda</a> 
-<a href="afterlogincotact.php"><i class="fas fa-phone-volume"></i>Iletişim</a> 
+<a href="afterlogincontact.php"><i class="fas fa-phone-volume"></i>İletişim</a>
 <a href="profil.php"><i class="fa fa-user-circle-o"></i>Profil</a> 
 <a href="anasayfa.php"><i class="fas fa-times-circle"></i></i>Çıkış Yap</a> 
 </section>
