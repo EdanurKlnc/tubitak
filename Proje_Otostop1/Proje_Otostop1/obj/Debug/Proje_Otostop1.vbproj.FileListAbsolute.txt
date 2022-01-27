@@ -76,3 +76,10 @@ C:\Users\edanur\source\repos\Proje_Otostop1\Proje_Otostop1\obj\Debug\Proje_Otost
 C:\Users\edanur\source\repos\Proje_Otostop1\Proje_Otostop1\obj\Debug\Proje_Otostop1.dll
 C:\Users\edanur\source\repos\Proje_Otostop1\Proje_Otostop1\obj\Debug\WebForms_Basic.xml
 C:\Users\edanur\source\repos\Proje_Otostop1\Proje_Otostop1\obj\Debug\Proje_Otostop1.pdb
+C:\Users\Serhat\Desktop\Git\tubitak\Proje_Otostop1\Proje_Otostop1\obj\Debug\Proje_Otostop1.vbproj.AssemblyReference.cache
+C:\Users\Serhat\Desktop\Git\tubitak\Proje_Otostop1\Proje_Otostop1\obj\Debug\Proje_Otostop1.Resources.resources
+C:\Users\Serhat\Desktop\Git\tubitak\Proje_Otostop1\Proje_Otostop1\obj\Debug\Proje_Otostop1.vbproj.GenerateResource.cache
+C:\Users\Serhat\Desktop\Git\tubitak\Proje_Otostop1\Proje_Otostop1\obj\Debug\Proje_Otostop1.vbproj.CoreCompileInputs.cache
+C:\Users\Serhat\Desktop\Git\tubitak\Proje_Otostop1\Proje_Otostop1\obj\Debug\Proje_Otostop1.dll
+C:\Users\Serhat\Desktop\Git\tubitak\Proje_Otostop1\Proje_Otostop1\obj\Debug\WebForms_Basic.xml
+C:\Users\Serhat\Desktop\Git\tubitak\Proje_Otostop1\Proje_Otostop1\obj\Debug\Proje_Otostop1.pdb
