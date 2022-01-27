@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">proje</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="yolculuk_plan">Yolculuk planı</string>
-    <string name="_03_03_2022">03.03.2022</string>
-    <string name="nereden">Nereden</string>
-    <string name="nereye">Nereye</string>
-</resources>
