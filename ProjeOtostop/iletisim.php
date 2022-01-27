@@ -110,7 +110,7 @@ if(isset($_POST["gonder"])){
     }
     else{
         echo "<script type='text/javascript'>alert('Mesajınız başarıyla gönderildi,İletişim Sayfasına Yönlendiriliyorsunuz...')</script>";
-           heafer("Refresh: 0; url=iletisim.php");
+           header("Refresh: 0; url=iletisim.php");
     }
 }
 
