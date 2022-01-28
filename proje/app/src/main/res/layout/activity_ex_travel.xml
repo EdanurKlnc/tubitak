@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/foreverypage"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +12,7 @@
         android:layout_width="376dp"
         android:layout_height="203dp"
         android:clipToPadding="false"
-        app:cardBackgroundColor="#D6EAF8"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +77,7 @@
         android:layout_width="376dp"
         android:layout_height="203dp"
         android:clipToPadding="false"
-        app:cardBackgroundColor="#D6EAF8"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,28 +113,27 @@
             android:id="@+id/ilanExNerden2"
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:text="@string/nereden"
-            android:layout_marginTop="75dp"
             android:layout_marginLeft="20dp"
-            android:textSize="25sp"/>
+            android:layout_marginTop="75dp"
+            android:text="@string/nereden"
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/ilanExNereye2"
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:text="@string/nereye"
             android:layout_marginLeft="150dp"
             android:layout_marginTop="75dp"
-            android:textSize="25sp"
-            />
+            android:text="@string/nereye"
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/ilanExTarih2"
             android:layout_width="200dp"
             android:layout_height="45dp"
-            android:text="03.03.2022"
-            android:textSize="35sp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="130dp"
-            android:layout_marginLeft="20dp"/>
+            android:text="03.03.2022"
+            android:textSize="35sp" />
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
