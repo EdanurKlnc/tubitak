@@ -1,0 +1,64 @@
+.profilContent{
+    width: 65%;
+    float: left;
+    height:auto;
+    overflow: hidden;
+}
+.profil{
+    width: 100%;
+    float: left;
+    height: auto;
+
+}
+.profil img{
+    margin-top: 10px;
+    float: left;
+    width: 40%;
+    height: 20%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    padding: 5px;
+}
+.profilbilgi{
+    margin-top: 10px;
+    width: 50%;
+    margin-left: 5%;
+    float: left;
+    margin-bottom: 20px;
+    height: 30px;
+}
+.profilbilgia{
+    width: 30%;
+    height: 30px;
+    float: left;
+    color: blue;
+    overflow: hidden;
+
+}
+.profilbilgib{
+    width: 70%;
+    height: 30px;
+    float: left;
+    color: rgb(255, 0, 179);
+    overflow: hidden;
+    
+}
+.profilbilgic{
+    width: 30%;
+    height: 30px;
+    float: left;
+    margin-top: 30px;
+    color: rgb(0, 255, 132);
+    overflow: hidden;
+    
+}
+.profilbilgid{
+    width: 70%;
+    height: 30px;
+    float: left;
+    margin-top: 30px;
+    color: rgb(255, 123, 0);
+    overflow: hidden;
+    
+}

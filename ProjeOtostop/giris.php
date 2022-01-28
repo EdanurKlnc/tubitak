@@ -73,8 +73,11 @@ $kullanici_sifre = md5($_POST['ksifre']);
 $rol1=1;
 $rol2=0;
 
-$kullanici_kontrol =$pdo->query("SELECT * FROM kayit WHERE kayit_mail='$kullanici_mail' and kayit_sifre='$kullanici_sifre' AND rol='$rol2' ")->fetch();
-$admin_kontrol =$pdo->query("SELECT * FROM kayit WHERE kayit_mail='$kullanici_mail' and kayit_sifre='$kullanici_sifre' AND rol='$rol1' ")->fetch();
+$kullanici_kontrol =$pdo->query("SELECT * FROM kayit WHERE kayit_mail='$kullanici_mail' 
+and kayit_sifre='$kullanici_sifre' AND rol='$rol2' ")->fetch();
+
+$admin_kontrol =$pdo->query("SELECT * FROM kayit WHERE kayit_mail='$kullanici_mail' 
+and kayit_sifre='$kullanici_sifre' AND rol='$rol1' ")->fetch();
 
 
 if($kullanici_kontrol)
@@ -96,15 +99,15 @@ else if($admin_kontrol)
    
  /*   $_SESSION["admin"] = $admin_kontrol['kullanici_mail']; */
 
-    echo "<script type='text/javascript'>alert('Hoşgeldiniz, Sayın, $kullanici_mail Admin Sayfasına Yönlendiriliyorsunuz')</script>";
+    echo "<script type='text/javascript'>alert
+    ('Hoşgeldiniz, Sayın, $kullanici_mail Admin Sayfasına Yönlendiriliyorsunuz')</script>";
 
     header("Refresh: 0; url= admin.php");
-
-
     
 }
 else{
-        echo "<script type='text/javascript'>alert('Girmiş Olduğunuz Bilgiler Hatalıdır! Tekrar Deneyiniz')</script>";
+        echo "<script type='text/javascript'>alert
+        ('Girmiş Olduğunuz Bilgiler Hatalıdır! Tekrar Deneyiniz')</script>";
         header("Refresh: 0; url= giris.php");
 
 }

@@ -40,6 +40,9 @@
 
 </div>
 <div class="content" style="width: 30%;height: 40%;">
+
+        
+
     <div class="kullanici" ><p name="kadi" class="icerik"> -- </p></div>
     <div class="kullanici" ><p name="ksoyadi" class="icerik"> --  </p></div>
     <div class="kullanici" ><p name="karac" class="icerik">  --  </p>  </div>
@@ -56,14 +59,21 @@
 </div>
 
     </div>
+    <?php
+   
 
+    ?>
 
-
-
-</body>
-</html>
 <?php
 
 include("includes/pdo.php");
 
+
+
+
+
 ?>
+
+
+</body>
+</html>

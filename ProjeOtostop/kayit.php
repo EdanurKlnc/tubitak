@@ -81,7 +81,8 @@ if(isset($_POST["kayit"])){
     $kullanici_tel= $_POST['ktel'];
 
 
-    $ekle = "INSERT INTO kayit (kayit_ad,kayit_soyad,kayit_mail,kayit_sifre,kayit_tel) values ('".$kullanici_adi."','".$kullanici_soyadi."','".$kullanici_mail."','".$kullanici_sifre."','".$kullanici_tel."')";
+    $ekle = "INSERT INTO kayit (kayit_ad,kayit_soyad,kayit_mail,kayit_sifre,kayit_tel) values 
+    ('".$kullanici_adi."','".$kullanici_soyadi."','".$kullanici_mail."','".$kullanici_sifre."','".$kullanici_tel."')";
    /* $sonuc=mysqli_query($baglan,$ekle); */
    $pdo->exec($ekle);
 

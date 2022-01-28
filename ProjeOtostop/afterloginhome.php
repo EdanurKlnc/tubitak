@@ -24,6 +24,7 @@
        <a href="afterloginabout.php"><i class="fas fa-info"></i>Hakkımızda</a> 
        <a href="afterlogincontact.php"><i class="fas fa-phone-volume"></i>İletişim</a>
        <a href="profil.php"><i class="fa fa-user-circle-o"></i>Profil</a> 
+
        <a href="anasayfa.php"><i class="fas fa-times-circle"></i></i>Çıkış Yap</a>  
     </nav>
     </section>
