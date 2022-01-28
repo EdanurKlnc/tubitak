@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proje">
         <activity
+            android:name=".locationforpassenger"
+            android:exported="false" />
+        <activity
+            android:name=".locationforowner"
+            android:exported="false" />
+        <activity
             android:name=".selectExTravel"
             android:exported="false" />
         <activity

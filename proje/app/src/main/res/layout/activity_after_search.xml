@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_light_background"
+    android:background="@drawable/foreverypage"
     tools:context=".afterSearch">
 
     <androidx.cardview.widget.CardView
-        app:cardBackgroundColor="#D1F2EB"
         android:id="@+id/containercard"
         android:layout_width="413dp"
         android:layout_height="215dp"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="100dp"
         app:circularflow_radiusInDP="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,12 +85,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        app:cardBackgroundColor="#D1F2EB"
         android:id="@+id/containercard2"
         android:layout_width="413dp"
         android:layout_height="215dp"
-        app:cardCornerRadius="100dp"
         android:layout_marginTop="225dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="100dp"
         app:circularflow_radiusInDP="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,8 +139,8 @@
             android:layout_height="35dp"
             android:layout_marginLeft="250dp"
             android:layout_marginTop="50dp"
-            android:textSize="20sp"
-            android:text="Nereye" />
+            android:text="Nereye"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView7"
@@ -148,8 +148,8 @@
             android:layout_height="45dp"
             android:layout_marginLeft="125dp"
             android:layout_marginTop="100dp"
-            android:textSize="20sp"
-            android:text="Tarih" />
+            android:text="Tarih"
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
